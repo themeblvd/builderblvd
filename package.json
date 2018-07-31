@@ -1,0 +1,19 @@
+{
+  "name": "builderblvd",
+  "version": "1.0.0",
+  "description": "Content building blocks for a new era of WordPress.",
+  "main": "./assets/js/builderblvd.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themeblvd/builderblvd.git"
+  },
+  "author": "Jason Bobich <info@themeblvd.com>",
+  "license": "GPL-2.0+",
+  "bugs": {
+    "url": "https://github.com/themeblvd/builderblvd/issues"
+  },
+  "homepage": "https://github.com/themeblvd/builderblvd#readme"
+}
