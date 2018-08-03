@@ -14,7 +14,8 @@ define( 'BUILDERBLVD_PATH', dirname( __FILE__ ) . '/' );
 define( 'BUILDERBLVD_INC', BUILDERBLVD_PATH . 'includes/' );
 
 // Include files.
-require_once BUILDERBLVD_INC . 'functions/core.php';
+require_once BUILDERBLVD_INC . 'functions/editor.php';
+require_once BUILDERBLVD_INC . 'functions/frontend.php';
 
 /**
  * Run plugin.
