@@ -4,7 +4,12 @@
   "description": "Content building blocks for a new era of WordPress.",
   "main": "./assets/js/builderblvd.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp --gulpfile ./build/gulpfile.js watch",
+    "build": "npm run clean && gulp --gulpfile ./build/gulpfile.js && npm run package-plugin",
+    "build:css": "gulp --gulpfile ./build/gulpfile.js build-css",
+    "build:js": "gulp --gulpfile ./build/gulpfile.js build-js",
+    "clean": "gulp --gulpfile ./build/gulpfile.js clean",
+    "package-plugin": "gulp --gulpfile ./build/gulpfile.js package-plugin"
   },
   "repository": {
     "type": "git",
@@ -15,5 +20,27 @@
   "bugs": {
     "url": "https://github.com/themeblvd/builderblvd/issues"
   },
-  "homepage": "https://github.com/themeblvd/builderblvd#readme"
+  "homepage": "https://github.com/themeblvd/builderblvd#readme",
+  "devDependencies": {
+    "@wordpress/babel-preset-default": "^1.1.2",
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
+    "css-loader": "^1.0.0",
+    "del": "^3.0.0",
+    "frontstreet": "^1.0.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.9.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-zip": "^4.2.0",
+    "node-sass": "^4.9.2",
+    "node-sass-tilde-importer": "^1.0.2",
+    "postcss-loader": "^2.1.6",
+    "unminified-webpack-plugin": "^2.0.0",
+    "webpack": "^4.16.4",
+    "webpack-cli": "^3.1.0",
+    "webpack-stream": "^5.1.0"
+  }
 }
