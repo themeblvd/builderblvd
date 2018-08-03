@@ -1,0 +1,15 @@
+// Required by Front Street
+$direction: 'ltr';
+$version: 'full';
+
+// Front Street Functions, Variables and Mixins
+@import '~frontstreet/src/scss/utils/index';
+
+// Help compat of blocks, w/Front Steet core not included.
+@import './partials/compat';
+
+// Front Street Core Elements
+@import '~frontstreet/src/scss/core/colors';
+
+// Front Street Blocks
+@import '~frontstreet/src/scss/blocks/alert';
