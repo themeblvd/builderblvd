@@ -15,33 +15,33 @@ While the Theme Blvd's [Layout Builder](https://wordpress.org/plugins/theme-blvd
 
 The following is a working list of Builder Blvd's blocks. Currently, all except the "Section" block are being converted from elements of the [Theme Blvd Layout Builder](https://wordpress.org/plugins/theme-blvd-layout-builder/).
 
-| Name | ID | Formerly | In Front Street? |
+| Name | ID | Formerly | In [Front Street](https://github.com/themeblvd/frontstreet)? | Require Theme Support
 | ---- | -- | -------- | ---------------- |
-| Alert | alert | alert | Yes |
-| Author Box | author_box | author_box | No |
-| Blog | blog | blog | No |
-| Box | box | panel | Yes (widget) |
-| Call-to-Action | cta | slogan | No |
-| Icon Box | icon_box | icon_box | No |
-| Milestone | milestone | milestone | No |
-| Mini Post Grid | mini_post_grid | mini_post_grid | No |
-| Mini Post List | mini_post_list | mini_post_list | No |
-| Partner Logos | partners | partners | No |
-| Post Content | post | external | No |
-| Post Grid | post_grid | post_grid | No |
-| Post List | post_list | post_list | No |
-| Post Showcase | post_showcase | post_showcase | No |
-| Post Slider | post_slider | post_slider | @TODO |
-| Pricing Table | pricing_table | pricing_table | No |
-| Progress Bars | progress_bars | progress_bars | Yes |
-| Section | section | *N/A* | No |
-| Slider | slider | simple_slider | Yes |
-| Tabs | tabs | tabs | Yes |
-| Team Member | team_member | team_member | No |
-| Testimonial | testimonial | testimonial | Yes |
-| Testimonial Slider | testimonial_slider | testimonial_slider | No |
-| Toggles | toggles | toggles | Yes |
-| Widget Area | widgets | widget | No |
+| Alert | alert | alert | Yes | No |
+| Author Box | author_box | author_box | No | ? |
+| Blog | blog | blog | No | ? |
+| Box | box | panel | Yes (widget) | ? |
+| Call-to-Action | cta | slogan | No | ? |
+| Icon Box | icon_box | icon_box | No | ? |
+| Milestone | milestone | milestone | No | ? |
+| Mini Post Grid | mini_post_grid | mini_post_grid | No | ? |
+| Mini Post List | mini_post_list | mini_post_list | No | ? |
+| Partner Logos | partners | partners | No | ? |
+| Post Content | post | external | No | ? |
+| Post Grid | post_grid | post_grid | No | ? |
+| Post List | post_list | post_list | No | ? |
+| Post Showcase | post_showcase | post_showcase | No | ? |
+| Post Slider | post_slider | post_slider | @TODO | ? |
+| Pricing Table | pricing_table | pricing_table | No | ? |
+| Progress Bars | progress_bars | progress_bars | Yes | ? |
+| Section | section | *N/A* | No | ? |
+| Slider | slider | simple_slider | Yes | ? |
+| Tabs | tabs | tabs | Yes | ? |
+| Team Member | team_member | team_member | No | ? |
+| Testimonial | testimonial | testimonial | Yes | ? |
+| Testimonial Slider | testimonial_slider | testimonial_slider | No | ? |
+| Toggles | toggles | toggles | Yes | ? |
+| Widget Area | widgets | widget | No | ? |
 
 *Note: Still undecided if we'll need to create a Columns block or the default one of the WordPress editor can be extended.*
 
