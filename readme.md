@@ -16,7 +16,7 @@ While the Theme Blvd's [Layout Builder](https://wordpress.org/plugins/theme-blvd
 The following is a working list of Builder Blvd's blocks. Currently, all except the "Section" block are being converted from elements of the [Theme Blvd Layout Builder](https://wordpress.org/plugins/theme-blvd-layout-builder/).
 
 | Name | ID | Formerly | In [Front Street](https://github.com/themeblvd/frontstreet)? | Require Theme Support |
-| ---- | -- | -------- | ---------------- |
+| -- | -- | -- | -- | -- |
 | Alert | alert | alert | Yes | No |
 | Author Box | author_box | author_box | No | ? |
 | Blog | blog | blog | No | ? |
