@@ -13,12 +13,16 @@ While the Theme Blvd's [Layout Builder](https://wordpress.org/plugins/theme-blvd
 
 ### Blocks
 
-The following is a working list of Builder Blvd's blocks. Currently, all except the "Section" block are being converted from elements of the [Theme Blvd Layout Builder](https://wordpress.org/plugins/theme-blvd-layout-builder/).
+The following is a working list of Builder Blvd's blocks. Many of them are inspired from elements of the [Theme Blvd Layout Builder](https://wordpress.org/plugins/theme-blvd-layout-builder/).
 
 | Name | ID | Formerly | In [Front Street](https://github.com/themeblvd/frontstreet)? | Requires Theme Support? |
 | -- | -- | -- | -- | -- |
 | Alert | alert | alert | Yes | No |
 | Author Box | author_box | author_box | @TODO | No |
+| Background Color | background_color | *N/A* | Yes | No |
+| Background Image | background_image | *N/A* | Yes | No |
+| Background Parallax | background_parallax | *N/A* | Yes | No |
+| Background Video | background_video | *N/A* | @TODO | No |
 | Blog | blog | blog | No | Yes |
 | Box | box | panel | Yes (widget) | No |
 | Call-to-Action | cta | slogan | @TODO | No |
@@ -35,10 +39,6 @@ The following is a working list of Builder Blvd's blocks. Currently, all except 
 | Post Slider | post_slider | post_slider | @TODO | No |
 | Pricing Table | pricing_table | pricing_table | @TODO | No |
 | Progress Bars | progress_bars | progress_bars | Yes | No |
-| Color Section | section_color | *N/A* | No | No |
-| Image Section | section_image | *N/A* | No | No |
-| Parallax Section | section_parallax | *N/A* | No | No |
-| Video Section | section_video | *N/A* | No | No |
 | Slider | slider | simple_slider | Yes | No |
 | Tabs | tabs | tabs | Yes | No |
 | Team Member | team_member | team_member | @TODO | No |
