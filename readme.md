@@ -18,19 +18,19 @@ The following is a working list of Builder Blvd's blocks. Many of them are inspi
 | Name | ID | Formerly | In [Front Street](https://github.com/themeblvd/frontstreet)? | Require theme support? |
 | -- | -- | -- | -- | -- |
 | Alert | alert | alert | Yes | No |
-| Author Box | author_box | author_box | @TODO | No |
+| Author Box | author_box | author_box | [@TODO](https://github.com/themeblvd/frontstreet/issues/24) | No |
 | Background Color | background_color | *N/A* | Yes | No |
 | Background Image | background_image | *N/A* | Yes | No |
 | Background Parallax | background_parallax | *N/A* | Yes | No |
 | Background Video | background_video | *N/A* | [@TODO](https://github.com/themeblvd/frontstreet/issues/32) | No |
 | Blog | blog | blog | No | Yes |
 | Box | box | panel | Yes (widget) | No |
-| Call-to-Action | cta | slogan | [@TODO](https://github.com/themeblvd/frontstreet/issues/25) | No |
+| Call-to-Action | call_to_action | slogan | [@TODO](https://github.com/themeblvd/frontstreet/issues/25) | No |
 | Icon Box | icon_box | icon_box | [@TODO](https://github.com/themeblvd/frontstreet/issues/26) | No |
 | Menu | menu | *N/A* | Yes | No |
 | Milestone | milestone | milestone | [@TODO](https://github.com/themeblvd/frontstreet/issues/26) | No |
-| Mini Post Grid | mini_post_grid | mini_post_grid | @TODO | No |
-| Mini Post List | mini_post_list | mini_post_list | @TODO | No |
+| Mini Post Grid | mini_post_grid | mini_post_grid | [@TODO](https://github.com/themeblvd/frontstreet/issues/35) | No |
+| Mini Post List | mini_post_list | mini_post_list | [@TODO](https://github.com/themeblvd/frontstreet/issues/36) | No |
 | Post Content | post | external | No | No |
 | Post Grid | post_grid | post_grid | No | Yes |
 | Post List | post_list | post_list | No | Yes |
