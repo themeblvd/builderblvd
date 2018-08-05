@@ -15,34 +15,34 @@ While the Theme Blvd's [Layout Builder](https://wordpress.org/plugins/theme-blvd
 
 The following is a working list of Builder Blvd's blocks. Many of them are inspired from elements of the [Theme Blvd Layout Builder](https://wordpress.org/plugins/theme-blvd-layout-builder/).
 
-| Name | ID | Formerly | In [Front Street](https://github.com/themeblvd/frontstreet)? | Requires Theme Support? |
+| Name | ID | Formerly | In [Front Street](https://github.com/themeblvd/frontstreet)? | Require theme support? |
 | -- | -- | -- | -- | -- |
 | Alert | alert | alert | Yes | No |
 | Author Box | author_box | author_box | @TODO | No |
 | Background Color | background_color | *N/A* | Yes | No |
 | Background Image | background_image | *N/A* | Yes | No |
 | Background Parallax | background_parallax | *N/A* | Yes | No |
-| Background Video | background_video | *N/A* | @TODO | No |
+| Background Video | background_video | *N/A* | [@TODO](https://github.com/themeblvd/frontstreet/issues/32) | No |
 | Blog | blog | blog | No | Yes |
 | Box | box | panel | Yes (widget) | No |
-| Call-to-Action | cta | slogan | @TODO | No |
-| Icon Box | icon_box | icon_box | @TODO | No |
+| Call-to-Action | cta | slogan | [@TODO](https://github.com/themeblvd/frontstreet/issues/25) | No |
+| Icon Box | icon_box | icon_box | [@TODO](https://github.com/themeblvd/frontstreet/issues/26) | No |
 | Menu | menu | *N/A* | Yes | No |
-| Milestone | milestone | milestone | @TODO | No |
+| Milestone | milestone | milestone | [@TODO](https://github.com/themeblvd/frontstreet/issues/26) | No |
 | Mini Post Grid | mini_post_grid | mini_post_grid | @TODO | No |
 | Mini Post List | mini_post_list | mini_post_list | @TODO | No |
 | Post Content | post | external | No | No |
 | Post Grid | post_grid | post_grid | No | Yes |
 | Post List | post_list | post_list | No | Yes |
 | Post Showcase | post_showcase | post_showcase | No | Yes |
-| Post Slider | post_slider | post_slider | @TODO | No |
-| Pricing Table | pricing_table | pricing_table | @TODO | No |
+| Post Slider | post_slider | post_slider | No | Yes |
+| Pricing Table | pricing_table | pricing_table | [@TODO](https://github.com/themeblvd/frontstreet/issues/29) | No |
 | Progress Bars | progress_bars | progress_bars | Yes | No |
 | Slider | slider | simple_slider | Yes | No |
 | Tabs | tabs | tabs | Yes | No |
-| Team Member | team_member | team_member | @TODO | No |
+| Team Member | team_member | team_member | [@TODO](https://github.com/themeblvd/frontstreet/issues/30) | No |
 | Testimonial | testimonial | testimonial | Yes | No |
-| Testimonial Slider | testimonial_slider | testimonial_slider | @TODO | ? |
+| Testimonial Slider | testimonial_slider | testimonial_slider | [@TODO](https://github.com/themeblvd/frontstreet/issues/34) | No |
 | Toggles | toggles | toggles | Yes | No |
 | Widget Area | widgets | widget | No | No |
 
