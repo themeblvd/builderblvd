@@ -23,6 +23,7 @@ The following is a working list of Builder Blvd's blocks. Currently, all except 
 | Box | box | panel | Yes (widget) | No |
 | Call-to-Action | cta | slogan | @TODO | No |
 | Icon Box | icon_box | icon_box | @TODO | No |
+| Menu | menu | *N/A* | Yes | No |
 | Milestone | milestone | milestone | @TODO | No |
 | Mini Post Grid | mini_post_grid | mini_post_grid | @TODO | No |
 | Mini Post List | mini_post_list | mini_post_list | @TODO | No |
@@ -31,7 +32,7 @@ The following is a working list of Builder Blvd's blocks. Currently, all except 
 | Post Grid | post_grid | post_grid | No | Yes |
 | Post List | post_list | post_list | No | Yes |
 | Post Showcase | post_showcase | post_showcase | No | Yes |
-| Post Slider | post_slider | post_slider | @TODO | Yes |
+| Post Slider | post_slider | post_slider | @TODO | No |
 | Pricing Table | pricing_table | pricing_table | @TODO | No |
 | Progress Bars | progress_bars | progress_bars | Yes | No |
 | Color Section | section_color | *N/A* | No | No |
@@ -66,8 +67,8 @@ The following are elements of the [Theme Blvd Layout Builder](https://wordpress.
 | Custom Field | custom_field | Replace with actual content from custom field (unless Gutenberg adds a solution for adding placeholder before WP 5 release). |
 | Google Map | map | Find Google Map plugin to recommend instead. |
 | HTML | html | Convert to new WordPress editor's HTML block. |
-| Hero | jumbotron | Convert to section block containing relevant content |
-| Hero Slider | jumbotron_slider | Convert first hero to section block containing relevant content |
+| Hero | jumbotron | Convert to section block containing relevant content. |
+| Hero Slider | jumbotron_slider | Convert first hero to section block containing relevant content. |
 | Image | image | Convert to image in new WordPress editor. |
 | Milestong Ring | milestone_ring | Replace with Milestone block. |
 | Quote | quote | Convert to standard blockquote in new WordPress editor. |
