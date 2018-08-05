@@ -18,24 +18,6 @@ require_once BUILDER_BLVD_INC . 'functions/editor.php';
 require_once BUILDER_BLVD_INC . 'functions/frontend.php';
 
 /**
- * Run plugin.
- *
- * @since 1.0.0
- */
-add_action( 'after_setup_theme', function() {
-
-	/**
-	 * Fires just before the plugin initializes.
-	 *
-	 * @since 1.0.0
-	 */
-	do_action( 'builderblvd_init' );
-
-	// ...
-
-} );
-
-/**
  * Register text domain for localization.
  *
  * @since 1.0.0
