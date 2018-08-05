@@ -18,9 +18,9 @@ function assets() {
 
 	wp_enqueue_script(
 		'builderblvd-editor',
-		esc_url( BUILDERBLVD_URL . "assets/js/editor{$suffix}.js" ),
+		esc_url( BUILDER_BLVD_URL . "assets/js/editor{$suffix}.js" ),
 		array( 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components' ),
-		BUILDERBLVD_VERSION,
+		BUILDER_BLVD_VERSION,
 		true
 	);
 
@@ -31,7 +31,7 @@ function assets() {
 		 * Filters the setting items attached to the
 		 * `builderblvd-editor` scripts.
 		 *
-		 * @param Array Settings for editor integration.
+		 * @param array Settings for editor integration.
 		 */
 		apply_filters( 'builderblvd_editor_settings', array(
 			'hasThemeSupport' => current_theme_supports( 'builderblvd' ) ? true : false
@@ -40,9 +40,9 @@ function assets() {
 
 	wp_enqueue_style(
 		'builderblvd-editor',
-		esc_url( BUILDERBLVD_URL . "assets/css/editor{$suffix}.css" ),
+		esc_url( BUILDER_BLVD_URL . "assets/css/editor{$suffix}.css" ),
 		array( 'wp-blocks' ),
-		BUILDERBLVD_VERSION
+		BUILDER_BLVD_VERSION
 	);
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\assets' );

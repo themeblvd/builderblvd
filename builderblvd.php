@@ -8,14 +8,14 @@ Author URI: http://themeblvd.com
 License: GPL2+
 */
 
-define( 'BUILDERBLVD_VERSION', '1.0.0' );
-define( 'BUILDERBLVD_URL', plugin_dir_url( __FILE__ ) );
-define( 'BUILDERBLVD_PATH', dirname( __FILE__ ) . '/' );
-define( 'BUILDERBLVD_INC', BUILDERBLVD_PATH . 'includes/' );
+define( 'BUILDER_BLVD_VERSION', '1.0.0' );
+define( 'BUILDER_BLVD_URL', plugin_dir_url( __FILE__ ) );
+define( 'BUILDER_BLVD_PATH', dirname( __FILE__ ) . '/' );
+define( 'BUILDER_BLVD_INC', BUILDER_BLVD_PATH . 'includes/' );
 
 // Include files.
-require_once BUILDERBLVD_INC . 'functions/editor.php';
-require_once BUILDERBLVD_INC . 'functions/frontend.php';
+require_once BUILDER_BLVD_INC . 'functions/editor.php';
+require_once BUILDER_BLVD_INC . 'functions/frontend.php';
 
 /**
  * Run plugin.

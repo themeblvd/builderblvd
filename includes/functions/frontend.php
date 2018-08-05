@@ -21,18 +21,18 @@ function assets() {
 		/*
 		wp_enqueue_script(
 			 'builderblvd-frontend',
-			 esc_url( BUILDERBLVD_URL . "assets/js/frontend{$suffix}.js" ),
+			 esc_url( BUILDER_BLVD_URL . "assets/js/frontend{$suffix}.js" ),
 			 [ 'jquery' ],
-			 BUILDERBLVD_VERSION,
+			 BUILDER_BLVD_VERSION,
 			 true
 		);
 		*/
 
 		wp_enqueue_style(
 			'builderblvd-frontend',
-			esc_url( BUILDERBLVD_URL . "assets/css/frontend{$suffix}.css" ),
+			esc_url( BUILDER_BLVD_URL . "assets/css/frontend{$suffix}.css" ),
 			array( 'wp-blocks' ),
-			BUILDERBLVD_VERSION
+			BUILDER_BLVD_VERSION
 		);
 
 	}
