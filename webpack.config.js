@@ -13,7 +13,8 @@ module.exports = {
     filename: './js/[name].min.js'
   },
   externals: {
-    wp: 'wp'
+    wp: 'wp',
+    builderblvd: 'builderBlvd'
   },
   module: {
     rules: [

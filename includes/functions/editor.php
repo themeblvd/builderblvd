@@ -24,6 +24,20 @@ function assets() {
 		true
 	);
 
+	wp_localize_script(
+		'builderblvd-editor',
+		'builderBlvd',
+		/**
+		 * Filters the setting items attached to the
+		 * `builderblvd-editor` scripts.
+		 *
+		 * @param Array Settings for editor integration.
+		 */
+		apply_filters( 'builderblvd_editor_settings', array(
+			'hasThemeSupport' => current_theme_supports( 'builderblvd' ) ? true : false
+		))
+	);
+
 	wp_enqueue_style(
 		'builderblvd-editor',
 		esc_url( BUILDERBLVD_URL . "assets/css/editor{$suffix}.css" ),
