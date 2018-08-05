@@ -31,7 +31,6 @@ The following is a working list of Builder Blvd's blocks. Many of them are inspi
 | Milestone | milestone | milestone | @TODO | No |
 | Mini Post Grid | mini_post_grid | mini_post_grid | @TODO | No |
 | Mini Post List | mini_post_list | mini_post_list | @TODO | No |
-| Partner Logos | partners | partners | @TODO | No |
 | Post Content | post | external | No | No |
 | Post Grid | post_grid | post_grid | No | Yes |
 | Post List | post_list | post_list | No | Yes |
@@ -71,6 +70,7 @@ The following are elements of the [Theme Blvd Layout Builder](https://wordpress.
 | Hero Slider | jumbotron_slider | Convert first hero to section block containing relevant content. |
 | Image | image | Convert to image in new WordPress editor. |
 | Milestong Ring | milestone_ring | Replace with Milestone block. |
+| Partner Logos | partners | Convert to columns with logs as images. |
 | Quote | quote | Convert to standard blockquote in new WordPress editor. |
 | Video | video | Convert to standard embed in new WordPress editor. |
 
