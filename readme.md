@@ -74,6 +74,14 @@ The following are elements of the [Theme Blvd Layout Builder](https://wordpress.
 | Quote | quote | Convert to standard blockquote in new WordPress editor. |
 | Video | video | Convert to standard embed in new WordPress editor. |
 
+### Color Library
+
+Add a section to WordPress settings that allows the user to disable the color library. Enabled by default.
+
+The color library will be useful in that many blocks can have preset color selections instead of just selecting a custom color. The downside is that adding support for this adds a lot of extra styles to be included in their website to make all of the colors available.
+
+*Note: We'll need to output an object from WP that has our various options (i.e. `wp_localize_script()`) and incorporate that object into our Webpack externals. This can be used for other things like checking if theme support is declared or not, too.*
+
 ## Creator
 
 **Jason Bobich**
