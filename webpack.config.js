@@ -14,7 +14,7 @@ module.exports = {
   },
   externals: {
     wp: 'wp',
-    builderblvd: 'builderBlvd'
+    builderblvd: 'builderBlvdL10n'
   },
   module: {
     rules: [

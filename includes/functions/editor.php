@@ -26,15 +26,16 @@ function assets() {
 
 	wp_localize_script(
 		'builderblvd-editor',
-		'builderBlvd',
+		'builderBlvdL10n',
 		/**
-		 * Filters the setting items attached to the
+		 * Filters the setting values attached to the
 		 * `builderblvd-editor` scripts.
 		 *
 		 * @param array Settings for editor integration.
 		 */
-		apply_filters( 'builderblvd_editor_settings', array(
-			'hasThemeSupport' => current_theme_supports( 'builderblvd' ) ? true : false
+		apply_filters( 'builderblvd_editor_l10n', array(
+			'hasThemeSupport' => current_theme_supports( 'builderblvd' ) ? true : false,
+			'hasColorLibrary' => get_option( 'builderblvd_color_lib', '1' ) === '1' ? true : false,
 		))
 	);
 
