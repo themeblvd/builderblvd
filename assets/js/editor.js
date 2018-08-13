@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 40);
+/******/ 	return __webpack_require__(__webpack_require__.s = 41);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -169,7 +169,7 @@ module.exports = function (it) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(28);
+var cof = __webpack_require__(29);
 // eslint-disable-next-line no-prototype-builtins
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
   return cof(it) == 'String' ? it.split('') : Object(it);
@@ -208,7 +208,7 @@ module.exports = function (it) {
 
 exports.__esModule = true;
 
-var _assign = __webpack_require__(12);
+var _assign = __webpack_require__(13);
 
 var _assign2 = _interopRequireDefault(_assign);
 
@@ -232,34 +232,91 @@ exports.default = _assign2.default || function (target) {
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(13), __esModule: true };
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = [];
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (!arg) continue;
+
+			var argType = typeof arg;
+
+			if (argType === 'string' || argType === 'number') {
+				classes.push(arg);
+			} else if (Array.isArray(arg) && arg.length) {
+				var inner = classNames.apply(null, arg);
+				if (inner) {
+					classes.push(inner);
+				}
+			} else if (argType === 'object') {
+				for (var key in arg) {
+					if (hasOwn.call(arg, key) && arg[key]) {
+						classes.push(key);
+					}
+				}
+			}
+		}
+
+		return classes.join(' ');
+	}
+
+	if (typeof module !== 'undefined' && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
 
 /***/ }),
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(14);
-module.exports = __webpack_require__(2).Object.assign;
-
+module.exports = { "default": __webpack_require__(14), __esModule: true };
 
 /***/ }),
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-// 19.1.3.1 Object.assign(target, source)
-var $export = __webpack_require__(15);
-
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(25) });
+__webpack_require__(15);
+module.exports = __webpack_require__(2).Object.assign;
 
 
 /***/ }),
 /* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
+// 19.1.3.1 Object.assign(target, source)
+var $export = __webpack_require__(16);
+
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(26) });
+
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var global = __webpack_require__(1);
 var core = __webpack_require__(2);
-var ctx = __webpack_require__(16);
-var hide = __webpack_require__(18);
+var ctx = __webpack_require__(17);
+var hide = __webpack_require__(19);
 var has = __webpack_require__(6);
 var PROTOTYPE = 'prototype';
 
@@ -321,11 +378,11 @@ module.exports = $export;
 
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // optional / simple context binding
-var aFunction = __webpack_require__(17);
+var aFunction = __webpack_require__(18);
 module.exports = function (fn, that, length) {
   aFunction(fn);
   if (that === undefined) return fn;
@@ -347,7 +404,7 @@ module.exports = function (fn, that, length) {
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 module.exports = function (it) {
@@ -357,11 +414,11 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var dP = __webpack_require__(19);
-var createDesc = __webpack_require__(24);
+var dP = __webpack_require__(20);
+var createDesc = __webpack_require__(25);
 module.exports = __webpack_require__(4) ? function (object, key, value) {
   return dP.f(object, key, createDesc(1, value));
 } : function (object, key, value) {
@@ -371,12 +428,12 @@ module.exports = __webpack_require__(4) ? function (object, key, value) {
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var anObject = __webpack_require__(20);
-var IE8_DOM_DEFINE = __webpack_require__(21);
-var toPrimitive = __webpack_require__(23);
+var anObject = __webpack_require__(21);
+var IE8_DOM_DEFINE = __webpack_require__(22);
+var toPrimitive = __webpack_require__(24);
 var dP = Object.defineProperty;
 
 exports.f = __webpack_require__(4) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
@@ -393,7 +450,7 @@ exports.f = __webpack_require__(4) ? Object.defineProperty : function defineProp
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(3);
@@ -404,16 +461,16 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = !__webpack_require__(4) && !__webpack_require__(5)(function () {
-  return Object.defineProperty(__webpack_require__(22)('div'), 'a', { get: function () { return 7; } }).a != 7;
+  return Object.defineProperty(__webpack_require__(23)('div'), 'a', { get: function () { return 7; } }).a != 7;
 });
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(3);
@@ -426,7 +483,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.1 ToPrimitive(input [, PreferredType])
@@ -444,7 +501,7 @@ module.exports = function (it, S) {
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 module.exports = function (bitmap, value) {
@@ -458,16 +515,16 @@ module.exports = function (bitmap, value) {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // 19.1.2.1 Object.assign(target, source, ...)
-var getKeys = __webpack_require__(26);
-var gOPS = __webpack_require__(37);
-var pIE = __webpack_require__(38);
-var toObject = __webpack_require__(39);
+var getKeys = __webpack_require__(27);
+var gOPS = __webpack_require__(38);
+var pIE = __webpack_require__(39);
+var toObject = __webpack_require__(40);
 var IObject = __webpack_require__(8);
 var $assign = Object.assign;
 
@@ -499,12 +556,12 @@ module.exports = !$assign || __webpack_require__(5)(function () {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys = __webpack_require__(27);
-var enumBugKeys = __webpack_require__(36);
+var $keys = __webpack_require__(28);
+var enumBugKeys = __webpack_require__(37);
 
 module.exports = Object.keys || function keys(O) {
   return $keys(O, enumBugKeys);
@@ -512,13 +569,13 @@ module.exports = Object.keys || function keys(O) {
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var has = __webpack_require__(6);
 var toIObject = __webpack_require__(7);
-var arrayIndexOf = __webpack_require__(29)(false);
-var IE_PROTO = __webpack_require__(32)('IE_PROTO');
+var arrayIndexOf = __webpack_require__(30)(false);
+var IE_PROTO = __webpack_require__(33)('IE_PROTO');
 
 module.exports = function (object, names) {
   var O = toIObject(object);
@@ -535,7 +592,7 @@ module.exports = function (object, names) {
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -546,14 +603,14 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // false -> Array#indexOf
 // true  -> Array#includes
 var toIObject = __webpack_require__(7);
-var toLength = __webpack_require__(30);
-var toAbsoluteIndex = __webpack_require__(31);
+var toLength = __webpack_require__(31);
+var toAbsoluteIndex = __webpack_require__(32);
 module.exports = function (IS_INCLUDES) {
   return function ($this, el, fromIndex) {
     var O = toIObject($this);
@@ -575,7 +632,7 @@ module.exports = function (IS_INCLUDES) {
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.15 ToLength
@@ -587,7 +644,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toInteger = __webpack_require__(10);
@@ -600,18 +657,18 @@ module.exports = function (index, length) {
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var shared = __webpack_require__(33)('keys');
-var uid = __webpack_require__(35);
+var shared = __webpack_require__(34)('keys');
+var uid = __webpack_require__(36);
 module.exports = function (key) {
   return shared[key] || (shared[key] = uid(key));
 };
 
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var core = __webpack_require__(2);
@@ -623,20 +680,20 @@ var store = global[SHARED] || (global[SHARED] = {});
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
   version: core.version,
-  mode: __webpack_require__(34) ? 'pure' : 'global',
+  mode: __webpack_require__(35) ? 'pure' : 'global',
   copyright: '© 2018 Denis Pushkarev (zloirock.ru)'
 });
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, exports) {
 
 module.exports = true;
 
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 var id = 0;
@@ -647,7 +704,7 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports) {
 
 // IE 8- don't enum bug keys
@@ -657,21 +714,21 @@ module.exports = (
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports) {
 
 exports.f = Object.getOwnPropertySymbols;
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports) {
 
 exports.f = {}.propertyIsEnumerable;
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.13 ToObject(argument)
@@ -682,7 +739,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -696,13 +753,122 @@ var extends_default = /*#__PURE__*/__webpack_require__.n(helpers_extends);
 var external_wp_ = __webpack_require__(0);
 var external_wp_default = /*#__PURE__*/__webpack_require__.n(external_wp_);
 
+// EXTERNAL MODULE: ../node_modules/classnames/index.js
+var classnames = __webpack_require__(12);
+var classnames_default = /*#__PURE__*/__webpack_require__.n(classnames);
+
+// CONCATENATED MODULE: ../assets/src/js/utils/index.js
+/**
+ * Block Alignment
+ *
+ * This method is needed for implmenting block
+ * alignment option. At this time, it must be called
+ * getEditWrapperProps.
+ */
+function getEditWrapperProps(_ref) {
+  var blockAlignment = _ref.blockAlignment;
+
+  if (blockAlignment === 'left' || blockAlignment === 'right' || blockAlignment === 'full') {
+    return { 'data-align': blockAlignment };
+  }
+}
+// CONCATENATED MODULE: ../assets/src/js/components/BlockToolbar.js
+
+
+var _wp$editor = external_wp_default.a.editor,
+    AlignmentToolbar = _wp$editor.AlignmentToolbar,
+    BlockControls = _wp$editor.BlockControls,
+    BlockAlignmentToolbar = _wp$editor.BlockAlignmentToolbar;
+
+/**
+ * Standard block toolbar.
+ *
+ * This components builds out a common, re-usable
+ * combination of different default WordPress
+ * rich-text toolbars.
+ *
+ * @param {Object} props Component properties.
+ * @return {Component}
+ */
+
+var BlockToolbar_BlockToolbar = function BlockToolbar(props) {
+  var setAttributes = props.setAttributes,
+      attributes = props.attributes;
+  var textAlignment = attributes.textAlignment,
+      blockAlignment = attributes.blockAlignment;
+
+
+  return external_wp_default.a.element.createElement(
+    BlockControls,
+    null,
+    external_wp_default.a.element.createElement(BlockAlignmentToolbar, {
+      value: blockAlignment,
+      onChange: function onChange(blockAlignment) {
+        return setAttributes({ blockAlignment: blockAlignment });
+      }
+    }),
+    external_wp_default.a.element.createElement(AlignmentToolbar, {
+      value: textAlignment,
+      onChange: function onChange(textAlignment) {
+        return setAttributes({ textAlignment: textAlignment });
+      }
+    })
+  );
+};
+
+/* harmony default export */ var components_BlockToolbar = (BlockToolbar_BlockToolbar);
+// CONCATENATED MODULE: ../assets/src/js/components/SaveRichText.js
+/**
+ * Standarize saving rich-text.
+ *
+ * For dynamic blocks with a single rich-text element,
+ * we save out a static block containing just that
+ * rendered content, and then render out the rest of
+ * the block with PHP on the front-end. This provides
+ * a more future-proof solution for rendering blocks.
+ *
+ * This component creates a standard way of rendering
+ * out the rich-text content and saving it to the database.
+ *
+ * @param {Object} props           Component properties.
+ * @param {string} props.content   Rich-text content.
+ * @param {string} props.textAlign How to align text.
+ * @return {Component}
+ */
+var SaveRichText = function SaveRichText(props) {
+  var content = props.content,
+      textAlignment = props.textAlignment;
+
+
+  return wp.element.createElement(
+    "div",
+    { className: "rich-text", style: { textAlign: textAlignment } },
+    content
+  );
+};
+
+/* harmony default export */ var components_SaveRichText = (SaveRichText);
 // CONCATENATED MODULE: ../assets/src/js/blocks/alert/index.js
 
 
 
+
+
+
+
 var __ = external_wp_default.a.i18n.__;
+var Fragment = external_wp_default.a.element.Fragment;
 var registerBlockType = external_wp_default.a.blocks.registerBlockType;
-var RichText = external_wp_default.a.editor.RichText;
+var alert_wp$editor = external_wp_default.a.editor,
+    RichText = alert_wp$editor.RichText,
+    InspectorControls = alert_wp$editor.InspectorControls,
+    alert_AlignmentToolbar = alert_wp$editor.AlignmentToolbar,
+    alert_BlockControls = alert_wp$editor.BlockControls,
+    alert_BlockAlignmentToolbar = alert_wp$editor.BlockAlignmentToolbar;
+var _wp$components = external_wp_default.a.components,
+    PanelBody = _wp$components.PanelBody,
+    SelectControl = _wp$components.SelectControl,
+    TextareaControl = _wp$components.TextareaControl;
 
 /**
  * Block Information
@@ -713,7 +879,10 @@ var block = {
   description: __('Notification content.', 'builderblvd'),
   category: 'common',
   icon: 'marker', // @TODO
-  keywords: [__('Notice', 'builderblvd')]
+  keywords: [__('Notice', 'builderblvd'), 'Builder Blvd'],
+  supports: {
+    className: false
+  }
 };
 
 /**
@@ -723,7 +892,20 @@ var alert_attributes = {
   content: {
     type: 'array',
     source: 'children',
-    selector: '.alert'
+    selector: '.rich-text',
+    default: ''
+  },
+  style: {
+    type: 'string',
+    default: 'info'
+  },
+  textAlignment: {
+    type: 'string',
+    default: ''
+  },
+  blockAlignment: {
+    type: 'string',
+    default: 'none'
   }
 };
 
@@ -731,44 +913,63 @@ var alert_attributes = {
  * Editable Block State
  */
 var alert_edit = function edit(props) {
-  var attributes = props.attributes,
-      className = props.className,
-      setAttributes = props.setAttributes; // @TODO className
+  var className = props.className,
+      setAttributes = props.setAttributes;
+  var _props$attributes = props.attributes,
+      content = _props$attributes.content,
+      style = _props$attributes.style,
+      textAlignment = _props$attributes.textAlignment,
+      blockAlignment = _props$attributes.blockAlignment;
 
-  var content = attributes.content;
+  var classes = classnames_default()('alert', style, className);
 
-
-  var handleChangeContent = function handleChangeContent(content) {
-    setAttributes({ content: content });
-  };
-
-  return external_wp_default.a.element.createElement(
+  return [external_wp_default.a.element.createElement(
+    InspectorControls,
+    null,
+    external_wp_default.a.element.createElement(
+      PanelBody,
+      null,
+      external_wp_default.a.element.createElement(SelectControl, {
+        label: __('Style', 'builderblvd'),
+        value: style,
+        options: [{ value: 'info', label: __('Information', 'builderblvd') }, { value: 'warning', label: __('Warning', 'builderblvd') }, { value: 'success', label: __('Success', 'builderblvd') }, { value: 'danger', label: __('Danger', 'builderblvd') }],
+        onChange: function onChange(style) {
+          return setAttributes({ style: style });
+        }
+      })
+    )
+  ), external_wp_default.a.element.createElement(
     'div',
-    { className: 'alert info' },
+    { className: classes, style: { textAlign: textAlignment } },
+    external_wp_default.a.element.createElement(components_BlockToolbar, props),
     external_wp_default.a.element.createElement(RichText, {
       tagName: 'div',
       multiline: 'p',
-      placeholder: __("Add your alert's message...", 'builderblvd'),
-      onChange: handleChangeContent,
+      placeholder: __('Add your message...', 'builderblvd'),
+      onChange: function onChange(content) {
+        return setAttributes({ content: content });
+      },
       value: content
     })
-  );
+  )];
 };
 
 /**
  * Saved Block State
  */
 var alert_save = function save(props) {
-  var attributes = props.attributes;
-
-  return external_wp_default.a.element.createElement(
-    'div',
-    { className: 'alert info' },
-    attributes.content
-  );
+  return external_wp_default.a.element.createElement(components_SaveRichText, props.attributes);
 };
 
-/* harmony default export */ var blocks_alert = (registerBlockType('builderblvd/alert', extends_default()({}, block, { attributes: alert_attributes, edit: alert_edit, save: alert_save })));
+/**
+ * Export Block
+ */
+/* harmony default export */ var blocks_alert = (registerBlockType('builderblvd/alert', extends_default()({}, block, {
+  attributes: alert_attributes,
+  getEditWrapperProps: getEditWrapperProps,
+  edit: alert_edit,
+  save: alert_save
+})));
 // CONCATENATED MODULE: ../assets/src/js/editor.js
 
 

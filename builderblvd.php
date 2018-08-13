@@ -15,8 +15,10 @@ define( 'BUILDER_BLVD_INC', BUILDER_BLVD_PATH . 'includes/' );
 
 // Include files.
 require_once BUILDER_BLVD_INC . 'functions/editor.php';
-require_once BUILDER_BLVD_INC . 'functions/frontend.php';
 require_once BUILDER_BLVD_INC . 'functions/settings.php';
+require_once BUILDER_BLVD_INC . 'functions/frontend.php';
+require_once BUILDER_BLVD_INC . 'functions/blocks.php';
+require_once BUILDER_BLVD_INC . 'functions/render/alert.php';
 
 /**
  * Register text domain for localization.

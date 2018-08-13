@@ -1,8 +1,20 @@
 import wp from 'wp';
+import classNames from 'classnames';
+import { getEditWrapperProps } from '../../utils';
+import BlockToolbar from '../../components/BlockToolbar';
+import SaveRichText from '../../components/SaveRichText';
 
 const { __ } = wp.i18n;
+const { Fragment } = wp.element;
 const { registerBlockType } = wp.blocks;
-const { RichText } = wp.editor;
+const {
+  RichText,
+  InspectorControls,
+  AlignmentToolbar,
+  BlockControls,
+  BlockAlignmentToolbar
+} = wp.editor;
+const { PanelBody, SelectControl, TextareaControl } = wp.components;
 
 /**
  * Block Information
@@ -12,7 +24,10 @@ const block = {
   description: __('Notification content.', 'builderblvd'),
   category: 'common',
   icon: 'marker', // @TODO
-  keywords: [__('Notice', 'builderblvd')]
+  keywords: [__('Notice', 'builderblvd'), 'Builder Blvd'],
+  supports: {
+    className: false
+  }
 };
 
 /**
@@ -22,7 +37,20 @@ const attributes = {
   content: {
     type: 'array',
     source: 'children',
-    selector: '.alert'
+    selector: '.rich-text',
+    default: ''
+  },
+  style: {
+    type: 'string',
+    default: 'info'
+  },
+  textAlignment: {
+    type: 'string',
+    default: ''
+  },
+  blockAlignment: {
+    type: 'string',
+    default: 'none'
   }
 };
 
@@ -30,32 +58,53 @@ const attributes = {
  * Editable Block State
  */
 const edit = props => {
-  const { attributes, className, setAttributes } = props; // @TODO className
-  const { content } = attributes;
+  const { className, setAttributes } = props;
+  const { content, style, textAlignment, blockAlignment } = props.attributes;
+  const classes = classNames('alert', style, className);
 
-  const handleChangeContent = content => {
-    setAttributes({ content });
-  };
-
-  return (
-    <div className="alert info">
+  return [
+    <InspectorControls>
+      <PanelBody>
+        <SelectControl
+          label={__('Style', 'builderblvd')}
+          value={style}
+          options={[
+            { value: 'info', label: __('Information', 'builderblvd') },
+            { value: 'warning', label: __('Warning', 'builderblvd') },
+            { value: 'success', label: __('Success', 'builderblvd') },
+            { value: 'danger', label: __('Danger', 'builderblvd') }
+          ]}
+          onChange={style => setAttributes({ style })}
+        />
+      </PanelBody>
+    </InspectorControls>,
+    <div className={classes} style={{ textAlign: textAlignment }}>
+      <BlockToolbar {...props} />
       <RichText
         tagName="div"
         multiline="p"
-        placeholder={__("Add your alert's message...", 'builderblvd')}
-        onChange={handleChangeContent}
+        placeholder={__('Add your message...', 'builderblvd')}
+        onChange={content => setAttributes({ content })}
         value={content}
       />
     </div>
-  );
+  ];
 };
 
 /**
  * Saved Block State
  */
 const save = props => {
-  const { attributes } = props;
-  return <div className="alert info">{attributes.content}</div>;
+  return <SaveRichText {...props.attributes} />;
 };
 
-export default registerBlockType('builderblvd/alert', { ...block, attributes, edit, save });
+/**
+ * Export Block
+ */
+export default registerBlockType('builderblvd/alert', {
+  ...block,
+  attributes,
+  getEditWrapperProps,
+  edit,
+  save
+});
