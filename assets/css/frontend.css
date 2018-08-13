@@ -1,5 +1,9 @@
+.alert p:first-child {
+  margin-top: 0;
+}
+
 .alert p:last-child {
-  margin: 0;
+  margin-bottom: 0;
 }
 
 .primary,
