@@ -26,6 +26,7 @@
     "babel-core": "^6.25.0",
     "babel-eslint": "^8.2.2",
     "babel-loader": "^7.1.4",
+    "classnames": "^2.2.6",
     "css-loader": "^1.0.0",
     "del": "^3.0.0",
     "frontstreet": "^1.0.1",
