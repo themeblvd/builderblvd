@@ -857,7 +857,6 @@ var SaveRichText = function SaveRichText(props) {
 
 
 var __ = external_wp_default.a.i18n.__;
-var Fragment = external_wp_default.a.element.Fragment;
 var registerBlockType = external_wp_default.a.blocks.registerBlockType;
 var alert_wp$editor = external_wp_default.a.editor,
     RichText = alert_wp$editor.RichText,
@@ -867,8 +866,7 @@ var alert_wp$editor = external_wp_default.a.editor,
     alert_BlockAlignmentToolbar = alert_wp$editor.BlockAlignmentToolbar;
 var _wp$components = external_wp_default.a.components,
     PanelBody = _wp$components.PanelBody,
-    SelectControl = _wp$components.SelectControl,
-    TextareaControl = _wp$components.TextareaControl;
+    SelectControl = _wp$components.SelectControl;
 
 /**
  * Block Information
@@ -923,7 +921,9 @@ var alert_edit = function edit(props) {
 
   var classes = classnames_default()('alert', style, className);
 
-  return [external_wp_default.a.element.createElement(
+  return [
+  // Sidebar Options
+  external_wp_default.a.element.createElement(
     InspectorControls,
     null,
     external_wp_default.a.element.createElement(
@@ -938,7 +938,10 @@ var alert_edit = function edit(props) {
         }
       })
     )
-  ), external_wp_default.a.element.createElement(
+  ),
+
+  // Editing Preview
+  external_wp_default.a.element.createElement(
     'div',
     { className: classes, style: { textAlign: textAlignment } },
     external_wp_default.a.element.createElement(components_BlockToolbar, props),

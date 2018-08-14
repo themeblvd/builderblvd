@@ -5,7 +5,6 @@ import BlockToolbar from '../../components/BlockToolbar';
 import SaveRichText from '../../components/SaveRichText';
 
 const { __ } = wp.i18n;
-const { Fragment } = wp.element;
 const { registerBlockType } = wp.blocks;
 const {
   RichText,
@@ -14,7 +13,7 @@ const {
   BlockControls,
   BlockAlignmentToolbar
 } = wp.editor;
-const { PanelBody, SelectControl, TextareaControl } = wp.components;
+const { PanelBody, SelectControl } = wp.components;
 
 /**
  * Block Information
@@ -63,6 +62,7 @@ const edit = props => {
   const classes = classNames('alert', style, className);
 
   return [
+    // Sidebar Options
     <InspectorControls>
       <PanelBody>
         <SelectControl
@@ -78,6 +78,8 @@ const edit = props => {
         />
       </PanelBody>
     </InspectorControls>,
+
+    // Editing Preview
     <div className={classes} style={{ textAlign: textAlignment }}>
       <BlockToolbar {...props} />
       <RichText
