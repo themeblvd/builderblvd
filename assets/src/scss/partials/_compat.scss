@@ -2,10 +2,30 @@
 // First/Last Child Elements
 //
 
-.alert p:first-child {
-  margin-top: 0;
+.builderblvd-block {
+  p:first-child {
+    margin-top: 0;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.alert p:last-child {
-  margin-bottom: 0;
+//
+// List Overrides
+//
+
+.fs-testimonial .testimonial-author {
+  list-style: none !important;
+}
+
+//
+// Testimonials
+//
+
+@include fs-min-width(md) {
+  .fs-testimonial.testimonial-lg .testimonial-text p {
+    font-size: $fs-testimonial-lg-font-size;
+    line-height: $fs-quote-line-height;
+  }
 }

@@ -6,13 +6,7 @@ import SaveRichText from '../../components/SaveRichText';
 
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const {
-  RichText,
-  InspectorControls,
-  AlignmentToolbar,
-  BlockControls,
-  BlockAlignmentToolbar
-} = wp.editor;
+const { RichText, InspectorControls } = wp.editor;
 const { PanelBody, SelectControl } = wp.components;
 
 /**
@@ -59,7 +53,7 @@ const attributes = {
 const edit = props => {
   const { className, setAttributes } = props;
   const { content, style, textAlignment, blockAlignment } = props.attributes;
-  const classes = classNames('alert', style, className);
+  const classes = classNames('builderblvd-block', 'alert', style, className);
 
   return [
     // Sidebar Options

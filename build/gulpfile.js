@@ -5,6 +5,8 @@ const buildCss = require('./tasks/build-css');
 
 gulp.task('build-editor-css', () => buildCss('editor'));
 
+gulp.task('build-editor-colors-css', () => buildCss('editor-colors'));
+
 gulp.task('build-frontend-css', () => buildCss('frontend'));
 
 gulp.task('build-css', ['build-editor-css', 'build-frontend-css']);

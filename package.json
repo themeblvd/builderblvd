@@ -29,7 +29,7 @@
     "classnames": "^2.2.6",
     "css-loader": "^1.0.0",
     "del": "^3.0.0",
-    "frontstreet": "^1.0.1",
+    "frontstreet": "^1.0.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.9.4",

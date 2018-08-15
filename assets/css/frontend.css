@@ -1,9 +1,20 @@
-.alert p:first-child {
+.builderblvd-block p:first-child {
   margin-top: 0;
 }
 
-.alert p:last-child {
+.builderblvd-block p:last-child {
   margin-bottom: 0;
+}
+
+.fs-testimonial .testimonial-author {
+  list-style: none !important;
+}
+
+@media (min-width: 62em) {
+  .fs-testimonial.testimonial-lg .testimonial-text p {
+    font-size: 28px;
+    line-height: 1.4;
+  }
 }
 
 .primary,

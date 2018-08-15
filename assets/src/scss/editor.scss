@@ -10,6 +10,8 @@ $version: 'full';
 
 // Front Street Core Elements
 @import '~frontstreet/src/scss/core/colors';
+@import '~frontstreet/src/scss/extras/helpers';
 
 // Front Street Blocks
 @import '~frontstreet/src/scss/blocks/alert';
+@import '~frontstreet/src/scss/blocks/testimonial';

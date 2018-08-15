@@ -1,0 +1,9 @@
+// Required by Front Street
+$direction: 'ltr';
+$version: 'full';
+
+// Front Street Functions, Variables and Mixins
+@import '~frontstreet/src/scss/utils/index';
+
+// Include Color Library
+@import '~frontstreet/src/scss/extras/color-library';

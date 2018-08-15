@@ -35,7 +35,7 @@ function assets() {
 		 */
 		apply_filters( 'builderblvd_editor_l10n', array(
 			'hasThemeSupport' => current_theme_supports( 'builderblvd' ) ? true : false,
-			'hasColorLibrary' => get_option( 'builderblvd_color_lib', '1' ) === '1' ? true : false,
+			'hasColorLibrary' => '1' === get_option( 'builderblvd_color_lib', '1' ) ? true : false,
 		))
 	);
 
@@ -45,5 +45,16 @@ function assets() {
 		array( 'wp-blocks' ),
 		BUILDER_BLVD_VERSION
 	);
+
+	if ( '1' === get_option( 'builderblvd_color_lib', '1' ) ) {
+
+		wp_enqueue_style(
+			'builderblvd-editor-colors',
+			esc_url( BUILDER_BLVD_URL . "assets/css/editor-colors{$suffix}.css" ),
+			array( 'wp-blocks' ),
+			BUILDER_BLVD_VERSION
+		);
+
+	}
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\assets' );
