@@ -29,8 +29,6 @@ The following is a working list of Builder Blvd's blocks. Many of them are inspi
 | Icon Box | icon_box | icon_box | [@TODO](https://github.com/themeblvd/frontstreet/issues/26) | No |
 | Menu | menu | *N/A* | Yes | No |
 | Milestone | milestone | milestone | [@TODO](https://github.com/themeblvd/frontstreet/issues/26) | No |
-| Mini Post Grid | mini_post_grid | mini_post_grid | [@TODO](https://github.com/themeblvd/frontstreet/issues/35) | No |
-| Mini Post List | mini_post_list | mini_post_list | [@TODO](https://github.com/themeblvd/frontstreet/issues/36) | No |
 | Post Content | post | external | No | No |
 | Post Grid | post_grid | post_grid | No | Yes |
 | Post List | post_list | post_list | No | Yes |
@@ -70,6 +68,8 @@ The following are elements of the [Theme Blvd Layout Builder](https://wordpress.
 | Hero Slider | jumbotron_slider | Convert first hero to section block containing relevant content. |
 | Image | image | Convert to image in new WordPress editor. |
 | Milestong Ring | milestone_ring | Replace with Milestone block. |
+| Mini Post Grid | mini_post_grid | Replace with default "Latest Posts" set to "grid" display. |
+| Mini Post List | mini_post_list | Replace with default "Latest Posts" set to "list" display. |
 | Partner Logos | partners | Convert to columns with logs as images. |
 | Quote | quote | Convert to standard blockquote in new WordPress editor. |
 | Video | video | Convert to standard embed in new WordPress editor. |
