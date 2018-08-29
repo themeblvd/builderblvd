@@ -35,7 +35,7 @@ function assets() {
 		 */
 		apply_filters( 'builderblvd_editor_l10n', array(
 			'hasThemeSupport' => current_theme_supports( 'builderblvd' ) ? true : false,
-			'hasColorLibrary' => get_option( 'builderblvd_color_lib', '1' ) === '1' ? true : false,
+			'themeColors'     => current( (array) get_theme_support( 'editor-color-palette' ) ),
 		))
 	);
 
@@ -45,5 +45,6 @@ function assets() {
 		array( 'wp-blocks' ),
 		BUILDER_BLVD_VERSION
 	);
+
 }
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\assets' );
