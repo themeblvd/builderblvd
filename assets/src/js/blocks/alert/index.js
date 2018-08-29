@@ -6,13 +6,7 @@ import SaveRichText from '../../components/SaveRichText';
 
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const {
-  RichText,
-  InspectorControls,
-  AlignmentToolbar,
-  BlockControls,
-  BlockAlignmentToolbar
-} = wp.editor;
+const { RichText, InspectorControls } = wp.editor;
 const { PanelBody, SelectControl } = wp.components;
 
 /**
@@ -59,11 +53,11 @@ const attributes = {
 const edit = props => {
   const { className, setAttributes } = props;
   const { content, style, textAlignment, blockAlignment } = props.attributes;
-  const classes = classNames('alert', style, className);
+  const classes = classNames('builderblvd-block', 'alert', style, className);
 
   return [
     // Sidebar Options
-    <InspectorControls>
+    <InspectorControls key={'builderblvd-alert-sidebar'}>
       <PanelBody>
         <SelectControl
           label={__('Style', 'builderblvd')}
@@ -80,7 +74,7 @@ const edit = props => {
     </InspectorControls>,
 
     // Editing Preview
-    <div className={classes} style={{ textAlign: textAlignment }}>
+    <div key={'builderblvd-alert-edit'} className={classes} style={{ textAlign: textAlignment }}>
       <BlockToolbar {...props} />
       <RichText
         tagName="div"
