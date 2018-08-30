@@ -39,6 +39,7 @@
     "node-sass": "^4.9.2",
     "node-sass-tilde-importer": "^1.0.2",
     "postcss-loader": "^2.1.6",
+    "tinycolor2": "^1.4.1",
     "unminified-webpack-plugin": "^2.0.0",
     "webpack": "^4.16.4",
     "webpack-cli": "^3.1.0",
