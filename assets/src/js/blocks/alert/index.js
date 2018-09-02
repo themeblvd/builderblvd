@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { getEditWrapperProps } from '../../utils';
 import BlockToolbar from '../../components/BlockToolbar';
 import SaveRichText from '../../components/SaveRichText';
+import BlockPreview from '../../components/BlockPreview';
 
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
@@ -53,11 +54,11 @@ const attributes = {
 const edit = props => {
   const { className, setAttributes } = props;
   const { content, style, textAlignment, blockAlignment } = props.attributes;
-  const classes = classNames('builderblvd-block', 'alert', style, className);
+  const classes = classNames('alert', style);
 
   return [
     // Sidebar Options
-    <InspectorControls key={'builderblvd-alert-sidebar'}>
+    <InspectorControls key="builderblvd-alert-inspector">
       <PanelBody>
         <SelectControl
           label={__('Style', 'builderblvd')}
@@ -74,16 +75,23 @@ const edit = props => {
     </InspectorControls>,
 
     // Editing Preview
-    <div key={'builderblvd-alert-edit'} className={classes} style={{ textAlign: textAlignment }}>
-      <BlockToolbar {...props} />
-      <RichText
-        tagName="div"
-        multiline="p"
-        placeholder={__('Add your message...', 'builderblvd')}
-        onChange={content => setAttributes({ content })}
-        value={content}
-      />
-    </div>
+    <BlockPreview
+      key="builderblvd-alert-preview"
+      type="alert"
+      blockAlignment={blockAlignment}
+      className={className}
+    >
+      <div className={classes} style={{ textAlign: textAlignment }}>
+        <BlockToolbar {...props} />
+        <RichText
+          tagName="div"
+          multiline="p"
+          placeholder={__('Add your message...', 'builderblvd')}
+          onChange={content => setAttributes({ content })}
+          value={content}
+        />
+      </div>
+    </BlockPreview>
   ];
 };
 
