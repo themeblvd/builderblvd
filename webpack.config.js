@@ -14,6 +14,7 @@ module.exports = {
   },
   externals: {
     wp: 'wp',
+    isRtl: 'isRtl',
     builderblvd: 'builderBlvdL10n'
   },
   module: {
