@@ -1,0 +1,33 @@
+//
+// Text Color
+//
+
+.builderblvd-block .text-light {
+  p,
+  .edit-post-visual-editor,
+  .edit-post-visual-editor p {
+    color: rgba($fs-color-text-inv-base, 0.8);
+  }
+}
+
+//
+// Testimonials
+//
+
+.builderblvd-block .fs-testimonial {
+  &.testimonial-md,
+  &.testimonial-lg {
+    .author-name .editor-plain-text {
+      text-align: center;
+    }
+  }
+  .author-image {
+    cursor: pointer;
+  }
+  @include fs-min-width(md) {
+    &.testimonial-lg .testimonial-text p {
+      font-size: $fs-testimonial-lg-font-size;
+      line-height: $fs-quote-line-height;
+    }
+  }
+}

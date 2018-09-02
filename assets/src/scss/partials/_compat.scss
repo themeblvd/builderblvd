@@ -1,11 +1,46 @@
 //
+// Alignment
+//
+
+.builderblvd-block.aligncenter {
+  > * {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  > .fs-testimonial.testimonial-sm,
+  > .fs-testimonial.testimonial-md {
+    max-width: 400px;
+  }
+  > .fs-testimonial.testimonial-lg {
+    max-width: 700px;
+  }
+}
+
+//
+// Text Color
+//
+
+.text-light {
+  color: rgba($fs-color-text-inv-base, 0.8);
+}
+
+//
 // First/Last Child Elements
 //
 
-.alert p:first-child {
-  margin-top: 0;
+.builderblvd-block {
+  p:first-child {
+    margin-top: 0;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.alert p:last-child {
-  margin-bottom: 0;
+//
+// List Overrides
+//
+
+.fs-testimonial .testimonial-author {
+  list-style: none !important;
 }
