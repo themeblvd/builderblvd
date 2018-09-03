@@ -22,6 +22,10 @@ add_action( 'init', function() {
 		'render_callback' => __NAMESPACE__ . '\alert'
 	) );
 
+	register_block_type( 'builderblvd/testimonial', array(
+		'render_callback' => __NAMESPACE__ . '\testimonial'
+	) );
+
 } );
 
 /**
@@ -73,7 +77,7 @@ function format_block( $block, $atts ) {
 	 */
 	return apply_filters(
 		'builderblvd_block_output',
-		sprintf( '<div class="%s">%s</div>', implode( ' ', $class ), $block ),
+		sprintf( '<div class="%s">%s</div>', esc_attr( implode( ' ', $class ) ), $block ),
 		$atts,
 		$class
 	);
