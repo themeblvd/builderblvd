@@ -23,7 +23,11 @@ function alert( $atts, $content ) {
 		'style' => 'info'
 	) );
 
-	$block = sprintf( '<div class="alert %s">%s</div>', $atts['style'], $content );
+	$block = sprintf(
+		'<div class="alert %s">%s</div>',
+		esc_attr( $atts['style'] ),
+		wp_kses_post( $content )
+	);
 
 	/**
 	 * Filters the `alert` block render.
